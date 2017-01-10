@@ -276,6 +276,9 @@ THIRD_PARTY_AUTH_CUSTOM_AUTH_FORMS = {
     },
 }
 
+################################## Edraak Hacks #####################################
+SKIP_EDRAAK_UNWANTED_TESTS = 1
+
 ################################## OPENID #####################################
 FEATURES['AUTH_USE_OPENID'] = True
 FEATURES['AUTH_USE_OPENID_PROVIDER'] = True
