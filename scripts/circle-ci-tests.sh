@@ -74,17 +74,15 @@ else
             ;;
 
         1)  # run all of the lms unit tests
-            paver test_system -s lms --with-flaky --cov-args="-p" --with-xunitmp
+            paver test_system -s lms --with-flaky --cov-args="-p --timeid" --with-xunitmp
             ;;
 
         2)  # run all of the cms unit tests
-            paver test_system -s cms --with-flaky --cov-args="-p" --with-xunitmp
+            paver test_system -s cms --with-flaky --cov-args="-p --timeid" --with-xunitmp
             ;;
 
         3)  # run the commonlib unit tests
-            pybabel extract --mapping=conf/locale/babel_underscore.cfg --add-comments="Translators:" --keyword="interpolate" . --output=conf/locale/en/LC_MESSAGES/underscore.po || EXIT=1
-            paver test_lib --with-flaky --cov-args="-p" --with-xunitmp || EXIT=1
-            exit $EXIT
+            paver test_lib --with-flaky --cov-args="-p --timeid" --with-xunitmp
             ;;
 
         *)
