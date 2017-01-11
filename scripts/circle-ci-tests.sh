@@ -82,7 +82,9 @@ else
             ;;
 
         3)  # run the commonlib unit tests
-            paver test_lib --with-flaky --cov-args="-p" --with-xunitmp
+            pybabel extract --mapping=conf/locale/babel_underscore.cfg --add-comments="Translators:" --keyword="interpolate" . --output=conf/locale/en/LC_MESSAGES/underscore.po || EXIT=1
+            paver test_lib --with-flaky --cov-args="-p" --with-xunitmp || EXIT=1
+            exit $EXIT
             ;;
 
         *)
