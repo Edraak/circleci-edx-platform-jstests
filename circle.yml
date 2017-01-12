@@ -5,6 +5,8 @@ machine:
     - sudo apt-get install lynx -yy
   python:
     version: 2.7.10
+  nodejs:
+    version: 4.2.6  # Just a random pin to nodejs! Got the version from CircleCI
 
 
 general:
@@ -16,6 +18,7 @@ general:
 dependencies:
   override:
     - npm install
+    - npm install -g karma-cli
 
     - pip install setuptools
     - pip install --exists-action w -r requirements/edx/paver.txt

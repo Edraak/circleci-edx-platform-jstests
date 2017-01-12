@@ -52,7 +52,7 @@ def test_js(options):
     test_suite = JsTestSuite(suite, mode=mode, with_coverage=coverage, port=port, skip_clean=skip_clean)
     test_suite.run()
 
-
+]
 @task
 @cmdopts([
     ("suite=", "s", "Test suite to run"),
