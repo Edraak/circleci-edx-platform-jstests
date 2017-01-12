@@ -5,9 +5,6 @@ machine:
     - sudo apt-get install lynx -yy
   python:
     version: 2.7.10
-  nodejs:
-    version: 4.2.6  # Just a random pin to nodejs! Got the version from CircleCI
-
 
 general:
   artifacts:
