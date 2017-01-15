@@ -641,6 +641,10 @@ Library.
 
             if (!cfg.window || !cfg.window.postMessage) throw("#2 Channel.build() called without a valid window argument");
 
+
+            var cfgWin = cfg.window;
+            var cfgWinPostMessage = cfg.window.postMessage;
+
             var postMessage = function(msg, force) {
                 if (!msg) throw "postMessage called with null message";
 
@@ -659,10 +663,12 @@ Library.
                     }
 
                     window['cons' + 'ole']['error']('OMAR: cfg.window =', cfg.window);
+                    window['cons' + 'ole']['error']('OMAR: cfgWin', cfgWin);
+                    window['cons' + 'ole']['error']('OMAR: cfgWinPostMessage', cfgWinPostMessage);
                     window['cons' + 'ole']['error']('OMAR: cfg.window.postMessage =', cfg.window.postMessage);
                     window['cons' + 'ole']['error']('OMAR: JSON.stringify =', JSON.stringify);
-                    if (!cfg.window || !cfg.window.postMessage) throw("#3 Channel.build() called without a valid window argument");
-                    cfg.window.postMessage(JSON.stringify(msg), cfg.origin);
+                    if (!cfgWin || !cfgWinPostMessage) throw("#3 Channel.build() called without a valid window argument");
+                    cfgWinPostMessage(JSON.stringify(msg), cfg.origin);
                 }
             };
 
