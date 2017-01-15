@@ -29,7 +29,7 @@ set -o pipefail
 # just done via the dependencies override section of circle.yml.
 export NO_PREREQ_INSTALL='true'
 
-paver test_js --coverage
+paver test_js --coverage --suite common
 paver diff_coverage
 
 #EXIT=0
