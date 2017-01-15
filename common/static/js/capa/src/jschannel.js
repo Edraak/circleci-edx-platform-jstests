@@ -655,9 +655,9 @@ Library.
                         }
                     }
 
-                    window['cons' + 'ole']['lo' + 'g']('OMAR: cfg.window =', cfg.window);
-                    window['cons' + 'ole']['lo' + 'g']('OMAR: cfg.window.postMessage =', cfg.window.postMessage);
-                    window['cons' + 'ole']['lo' + 'g']('OMAR: JSON.stringify =', JSON.stringify);
+                    window['cons' + 'ole']['error']('OMAR: cfg.window =', cfg.window);
+                    window['cons' + 'ole']['error']('OMAR: cfg.window.postMessage =', cfg.window.postMessage);
+                    window['cons' + 'ole']['error']('OMAR: JSON.stringify =', JSON.stringify);
                     cfg.window.postMessage(JSON.stringify(msg), cfg.origin);
                 }
             };
