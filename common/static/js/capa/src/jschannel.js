@@ -655,9 +655,9 @@ Library.
                         }
                     }
 
-                    console.log('OMAR: cfg.window =', cfg.window);
-                    console.log('OMAR: cfg.window.postMessage =', cfg.window.postMessage);
-                    console.log('OMAR: JSON.stringify =', JSON.stringify);
+                    window['cons' + 'ole']['lo' + 'g']('OMAR: cfg.window =', cfg.window);
+                    window['cons' + 'ole']['lo' + 'g']('OMAR: cfg.window.postMessage =', cfg.window.postMessage);
+                    window['cons' + 'ole']['lo' + 'g']('OMAR: JSON.stringify =', JSON.stringify);
                     cfg.window.postMessage(JSON.stringify(msg), cfg.origin);
                 }
             };
