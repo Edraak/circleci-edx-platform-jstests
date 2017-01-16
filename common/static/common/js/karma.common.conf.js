@@ -329,16 +329,16 @@ var getBaseConfig = function (config, useRequireJs) {
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: ['PhantomJS'],
 
-        //customLaunchers: {
-        //    // Firefox configuration that doesn't perform auto-updates
-        //    FirefoxNoUpdates: {
-        //        base: 'Firefox',
-        //        prefs: {
-        //            'app.update.auto': false,
-        //            'app.update.enabled': false
-        //        }
-        //    }
-        //},
+        customLaunchers: {
+            // Firefox configuration that doesn't perform auto-updates
+            FirefoxNoUpdates: {
+                base: 'Firefox',
+                prefs: {
+                    'app.update.auto': false,
+                    'app.update.enabled': false
+                }
+            }
+        },
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
@@ -351,7 +351,7 @@ var getBaseConfig = function (config, useRequireJs) {
         browserNoActivityTimeout: 50000,
 
         client: {
-            captureConsole: true
+            captureConsole: false
         }
     };
 };
