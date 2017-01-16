@@ -4,10 +4,6 @@ machine:
     - sudo apt-get install libxmlsec1 libxmlsec1-dev -yy
     - sudo apt-get install lynx -yy
 
-    # Install Firefox firefox_28.0
-    - wget -O firefox_28.0+build2-0ubuntu0.12.04.1_amd64.deb https://s3.amazonaws.com/vagrant.testeng.edx.org/firefox_28.0%2Bbuild2-0ubuntu0.12.04.1_amd64.deb
-    - sudo dpkg -i firefox_28.0+build2-0ubuntu0.12.04.1_amd64.deb
-    - sudo apt-get install -f make
   python:
     version: 2.7.10
 
