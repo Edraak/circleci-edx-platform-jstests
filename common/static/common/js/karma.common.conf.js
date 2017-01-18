@@ -327,7 +327,9 @@ var getBaseConfig = function (config, useRequireJs) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['PhantomJS'],
+        browsers: [
+            (process.env['CIRCLECI'] ? 'PhantomJS' : 'FirefoxNoUpdates')
+        ],
 
         customLaunchers: {
             // Firefox configuration that doesn't perform auto-updates
