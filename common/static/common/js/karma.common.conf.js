@@ -280,9 +280,9 @@ var getBaseConfig = function (config, useRequireJs) {
             'karma-requirejs',
             'karma-junit-reporter',
             'karma-coverage',
-            //'karma-chrome-launcher',
+            'karma-chrome-launcher',
             'karma-phantomjs-launcher',
-            //'karma-firefox-launcher',
+            'karma-firefox-launcher',
             'karma-spec-reporter',
             customPlugin
         ],
