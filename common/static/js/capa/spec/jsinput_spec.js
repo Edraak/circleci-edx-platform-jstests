@@ -1,6 +1,5 @@
 describe("JSInput", function () {
-    // Edraak: Skipped because we couldn't run it on CircleCI
-    return;
+    return;  // Edraak: Skipped because we couldn't run it on CircleCI
 
     var sections;
     var inputFields;

@@ -95,8 +95,7 @@ describe('TooltipManager', function () {
     });
 
     it('should moves correctly', function () {
-        // Edraak: Skipped test, couldn't make it work on CircleCI.
-        return;
+        return;  // Edraak: Skipped test, couldn't make it work on CircleCI.
 
         showTooltip(this.element);
         expect($('.tooltip')).toBeVisible();
