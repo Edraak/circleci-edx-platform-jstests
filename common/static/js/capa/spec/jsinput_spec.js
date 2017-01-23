@@ -28,3 +28,4 @@ describe("JSInput", function () {
         expect(sections.length).toEqual(inputFields.length);
     });
 });
+

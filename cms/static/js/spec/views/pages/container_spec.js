@@ -118,7 +118,7 @@ define(["jquery", "underscore", "underscore.string", "edx-ui-toolkit/js/utils/sp
                         renderContainerPage(this, mockBadXBlockContainerXBlockHtml);
                         expect(containerPage.$('.wrapper-xblock .level-nesting')).not.toHaveClass('is-hidden');
                         expect(containerPage.$('.ui-loading')).toHaveClass('is-hidden');
-                    })
+                    });
 
                     it('inline edits the display name when performing a new action', function () {
                         return;  // Edraak: Skipped, couldn't run on CircleCI

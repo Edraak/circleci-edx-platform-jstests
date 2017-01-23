@@ -638,10 +638,6 @@ Library.
 
             // a small wrapper around postmessage whose primary function is to handle the
             // case that clients start sending messages before the other end is "ready"
-
-            if (!cfg.window || !cfg.window.postMessage) throw("#2 Channel.build() called without a valid window argument");
-
-
             var postMessage = function(msg, force) {
                 if (!msg) throw "postMessage called with null message";
 
