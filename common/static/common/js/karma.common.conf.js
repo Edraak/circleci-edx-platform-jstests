@@ -281,6 +281,7 @@ var getBaseConfig = function (config, useRequireJs) {
             'karma-junit-reporter',
             'karma-coverage',
             'karma-chrome-launcher',
+            'karma-phantomjs-launcher',
             'karma-firefox-launcher',
             'karma-spec-reporter',
             customPlugin
@@ -326,7 +327,9 @@ var getBaseConfig = function (config, useRequireJs) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['FirefoxNoUpdates'],
+        browsers: [
+            (process.env['CIRCLECI'] ? 'PhantomJS' : 'FirefoxNoUpdates')
+        ],
 
         customLaunchers: {
             // Firefox configuration that doesn't perform auto-updates

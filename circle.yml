@@ -3,9 +3,9 @@ machine:
     - sudo apt-get update
     - sudo apt-get install libxmlsec1 libxmlsec1-dev -yy
     - sudo apt-get install lynx -yy
+
   python:
     version: 2.7.10
-
 
 general:
   artifacts:
@@ -16,6 +16,7 @@ general:
 dependencies:
   override:
     - npm install
+    - npm install -g karma-cli
 
     - pip install setuptools
     - pip install --exists-action w -r requirements/edx/paver.txt

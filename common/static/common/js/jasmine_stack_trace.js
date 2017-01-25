@@ -15,7 +15,7 @@
             this.stack = function (error) {
                 var errorMsg = null;
 
-                if (error) {
+                if (error && error.stack) {
                     errorMsg = error.stack.split('\n').slice(0, MAX_STACK_TRACE_LINES).join('\n');
                 }
 
